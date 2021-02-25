@@ -67,7 +67,7 @@ Text GLabel 7750 1050 0    50   Input ~ 0
 DQ5
 Text GLabel 7750 1150 0    50   Input ~ 0
 WR
-Text GLabel 7750 1250 0    50   Input ~ 0
+Text GLabel 5850 1225 0    50   Input ~ 0
 RAS
 Text GLabel 7750 1350 0    50   Input ~ 0
 A6
@@ -102,7 +102,7 @@ Text GLabel 8675 1450 0    50   Input ~ 0
 A2
 Text GLabel 8675 1550 0    50   Input ~ 0
 A3
-Text GLabel 6725 1625 0    50   Input ~ 0
+Text GLabel 8675 1650 0    50   Input ~ 0
 A7
 $Comp
 L Atari:DRAM_1MB_4bit U11
@@ -319,7 +319,7 @@ A13a
 Text GLabel 2850 6725 0    50   Input ~ 0
 A15a
 Text GLabel 1050 6850 0    50   Input ~ 0
-VCC
+VCCa
 Text GLabel 1050 7150 0    50   Input ~ 0
 GNDa
 Text GLabel 1050 6200 0    50   Input ~ 0
@@ -343,7 +343,7 @@ RD5
 Text GLabel 2850 7225 0    50   Input ~ 0
 GNDa
 Text GLabel 3775 6325 0    50   Input ~ 0
-VCC
+VCCa
 Text GLabel 1050 6050 0    50   Input ~ 0
 REF
 Text GLabel 3775 7225 0    50   Input ~ 0
@@ -438,8 +438,6 @@ Wire Wire Line
 Wire Wire Line
 	3000 3400 3525 3400
 Connection ~ 5525 6000
-Text GLabel 2475 3400 0    50   Input ~ 0
-RAS
 Wire Wire Line
 	3000 3400 2475 3400
 Connection ~ 3000 3400
@@ -572,8 +570,6 @@ Wire Wire Line
 Wire Wire Line
 	4950 3850 4725 3850
 Wire Wire Line
-	2475 2200 5050 2200
-Wire Wire Line
 	5050 2200 5050 4000
 Wire Wire Line
 	5050 4000 4725 4000
@@ -583,8 +579,6 @@ Wire Wire Line
 	4725 4300 5175 4300
 Wire Wire Line
 	5175 4300 5175 2050
-Wire Wire Line
-	5175 2050 2475 2050
 NoConn ~ 4725 4150
 Wire Wire Line
 	3525 5050 2450 5050
@@ -692,15 +686,15 @@ Wire Wire Line
 Wire Wire Line
 	1350 1250 1350 1300
 Text GLabel 750  850  1    50   Input ~ 0
-VCC
+VCCa
 Text GLabel 900  850  1    50   Input ~ 0
-VCC
+VCCa
 Text GLabel 1050 850  1    50   Input ~ 0
-VCC
+VCCa
 Text GLabel 1200 850  1    50   Input ~ 0
-VCC
+VCCa
 Text GLabel 1350 850  1    50   Input ~ 0
-VCC
+VCCa
 Wire Wire Line
 	750  850  750  950 
 Wire Wire Line
@@ -716,7 +710,7 @@ L Device:R R6
 U 1 1 603F4DB0
 P 925 4000
 F 0 "R6" V 925 3950 50  0000 L CNN
-F 1 "10k" V 995 3955 50  0000 L CNN
+F 1 "10k" V 875 4100 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 855 4000 50  0001 C CNN
 F 3 "~" H 925 4000 50  0001 C CNN
 	1    925  4000
@@ -727,7 +721,7 @@ L Device:R R7
 U 1 1 603F50DC
 P 1075 4000
 F 0 "R7" V 1075 3950 50  0000 L CNN
-F 1 "10k" V 1145 3955 50  0000 L CNN
+F 1 "10k" V 1125 4100 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1005 4000 50  0001 C CNN
 F 3 "~" H 1075 4000 50  0001 C CNN
 	1    1075 4000
@@ -963,8 +957,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10650 3775 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	10650 2675 10650 2750
-Wire Wire Line
 	10650 4075 10650 4175
 Wire Wire Line
 	10650 4775 10650 4875
@@ -983,25 +975,61 @@ F 3 "~" H 9850 4325 50  0001 C CNN
 	1    9850 4325
 	1    0    0    -1  
 $EndComp
+Text GLabel 10150 4225 2    50   Input ~ 0
+RAS
 Wire Wire Line
-	10650 4775 10150 4775
+	10150 4525 10475 4525
 Wire Wire Line
-	10150 4775 10150 4525
+	10475 4525 10475 4775
+Wire Wire Line
+	10475 4775 10650 4775
 Connection ~ 10650 4775
 Wire Wire Line
-	10650 3475 10425 3475
+	10650 2675 10650 2775
 Wire Wire Line
-	10425 3475 10425 4425
+	10150 4325 10400 4325
 Wire Wire Line
-	10425 4425 10150 4425
+	10475 4425 10475 3475
+Wire Wire Line
+	10475 3475 10650 3475
+Wire Wire Line
+	10150 4425 10475 4425
 Connection ~ 10650 3475
+Text GLabel 9650 4225 0    50   Input ~ 0
+RAS_OUT
 Wire Wire Line
-	10650 2750 10325 2750
+	9650 4325 9650 4425
 Wire Wire Line
-	10325 2750 10325 4325
+	9650 4425 9650 4525
+Connection ~ 9650 4425
 Wire Wire Line
-	10325 4325 10150 4325
-Connection ~ 10650 2750
+	9650 4325 9650 4225
+Connection ~ 9650 4325
+$Comp
+L 74xx:74LS04 U13
+U 7 1 603A40BC
+P 10025 2625
+F 0 "U13" H 9725 2975 50  0000 L CNN
+F 1 "74LS04" H 10075 3000 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10025 2625 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10025 2625 50  0001 C CNN
+	7    10025 2625
+	1    0    0    -1  
+$EndComp
+Text GLabel 10025 3125 3    50   Input ~ 0
+GND
+Text GLabel 10025 2125 1    50   Input ~ 0
+VCC
 Wire Wire Line
-	10650 2750 10650 2775
+	10400 2075 10650 2075
+Wire Wire Line
+	10400 2075 10400 4325
+Text GLabel 10650 6150 3    50   Input ~ 0
+RAS
+Text GLabel 2475 3400 0    50   Input ~ 0
+RAS_OUT
+Wire Wire Line
+	2475 2200 5050 2200
+Wire Wire Line
+	2475 2050 5175 2050
 $EndSCHEMATC
