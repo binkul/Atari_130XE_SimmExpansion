@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Atari simm expansion-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -39,24 +40,8 @@ Text GLabel 5850 925  0    50   Input ~ 0
 DQ0
 Text GLabel 5850 1025 0    50   Input ~ 0
 DQ1
-Text GLabel 5850 1325 0    50   Input ~ 0
-A6
-Text GLabel 5850 1425 0    50   Input ~ 0
-A5
-Text GLabel 5850 1525 0    50   Input ~ 0
-A4
 Text GLabel 5850 1625 0    50   Input ~ 0
 VCC
-Text GLabel 6725 1625 0    50   Input ~ 0
-A7
-Text GLabel 6725 1525 0    50   Input ~ 0
-A3
-Text GLabel 6725 1425 0    50   Input ~ 0
-A2
-Text GLabel 6725 1325 0    50   Input ~ 0
-A1
-Text GLabel 6725 1225 0    50   Input ~ 0
-A0
 Text GLabel 6725 1125 0    50   Input ~ 0
 DQ2
 Text GLabel 6725 925  0    50   Input ~ 0
@@ -107,8 +92,6 @@ Text GLabel 8675 850  0    50   Input ~ 0
 GND
 Text GLabel 8675 950  0    50   Input ~ 0
 DQ7
-Text GLabel 8675 1050 0    50   Input ~ 0
-CAS
 Text GLabel 8675 1150 0    50   Input ~ 0
 DQ6
 Text GLabel 8675 1250 0    50   Input ~ 0
@@ -119,7 +102,7 @@ Text GLabel 8675 1450 0    50   Input ~ 0
 A2
 Text GLabel 8675 1550 0    50   Input ~ 0
 A3
-Text GLabel 8675 1650 0    50   Input ~ 0
+Text GLabel 6725 1625 0    50   Input ~ 0
 A7
 $Comp
 L Atari:DRAM_1MB_4bit U11
@@ -318,27 +301,27 @@ Wire Wire Line
 Text GLabel 4725 5450 2    50   Input ~ 0
 GND
 Text GLabel 2250 6800 2    50   Input ~ 0
-A11
+A11a
 Text GLabel 2250 6900 2    50   Input ~ 0
-A12
+A12a
 Text GLabel 2250 7000 2    50   Input ~ 0
-A13
+A13a
 Text GLabel 2250 7100 2    50   Input ~ 0
-A14
+A14a
 Text GLabel 2250 7200 2    50   Input ~ 0
-A15
+A15a
 Text GLabel 2850 6325 0    50   Input ~ 0
-A11
+A11a
 Text GLabel 2850 6425 0    50   Input ~ 0
-A12
+A12a
 Text GLabel 2850 6525 0    50   Input ~ 0
-A13
+A13a
 Text GLabel 2850 6725 0    50   Input ~ 0
-A15
+A15a
 Text GLabel 1050 6850 0    50   Input ~ 0
 VCC
 Text GLabel 1050 7150 0    50   Input ~ 0
-GND
+GNDa
 Text GLabel 1050 6200 0    50   Input ~ 0
 S4
 Text GLabel 1050 6350 0    50   Input ~ 0
@@ -352,13 +335,13 @@ MPB
 Text GLabel 2250 7500 2    50   Input ~ 0
 CI
 Text GLabel 2850 6625 0    50   Input ~ 0
-A14
+A14a
 Text GLabel 2850 6925 0    50   Input ~ 0
 RD4
 Text GLabel 2850 7025 0    50   Input ~ 0
 RD5
 Text GLabel 2850 7225 0    50   Input ~ 0
-GND
+GNDa
 Text GLabel 3775 6325 0    50   Input ~ 0
 VCC
 Text GLabel 1050 6050 0    50   Input ~ 0
@@ -386,7 +369,7 @@ IO
 Text GLabel 3775 6625 0    50   Input ~ 0
 IO
 Text GLabel 2850 7125 0    50   Input ~ 0
-REN
+PB0
 Wire Wire Line
 	9625 1450 9625 1550
 Wire Wire Line
@@ -625,8 +608,6 @@ Wire Wire Line
 	5875 5700 5875 5800
 Text GLabel 5875 5800 0    50   Input ~ 0
 GND
-Text GLabel 5875 5500 0    50   Input ~ 0
-VCC
 Wire Wire Line
 	5875 3075 5875 3275
 Wire Wire Line
@@ -755,11 +736,7 @@ $EndComp
 Wire Wire Line
 	3525 4750 1075 4750
 Wire Wire Line
-	1075 4750 1075 4400
-Wire Wire Line
 	3525 4850 925  4850
-Wire Wire Line
-	925  4850 925  4300
 Text GLabel 925  3750 1    50   Input ~ 0
 VCC
 Text GLabel 1075 3750 1    50   Input ~ 0
@@ -779,16 +756,6 @@ F 3 "~" H 1475 4300 50  0001 C CNN
 	1    1475 4300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1275 4300 925  4300
-Connection ~ 925  4300
-Wire Wire Line
-	925  4300 925  4150
-Wire Wire Line
-	1275 4400 1075 4400
-Connection ~ 1075 4400
-Wire Wire Line
-	1075 4400 1075 4150
 Wire Wire Line
 	1775 4300 1775 4400
 Text GLabel 1775 4400 2    50   Input ~ 0
@@ -879,5 +846,162 @@ Wire Wire Line
 Wire Wire Line
 	3200 1300 3200 1475
 Text GLabel 1050 5900 0    50   Input ~ 0
-REN
+PB0
+Text GLabel 3775 6525 0    50   Input ~ 0
+PB1
+Text GLabel 2850 6825 0    50   Input ~ 0
+PB7
+$Comp
+L Connector_Generic:Conn_01x08 J10
+U 1 1 6036F9B5
+P 1075 2500
+F 0 "J10" H 1155 2492 50  0000 L CNN
+F 1 "PB0..7" H 1155 2401 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 1075 2500 50  0001 C CNN
+F 3 "~" H 1075 2500 50  0001 C CNN
+	1    1075 2500
+	1    0    0    -1  
+$EndComp
+Text GLabel 875  2200 0    50   Input ~ 0
+PB0
+Text GLabel 875  2300 0    50   Input ~ 0
+PB1
+Text GLabel 875  2400 0    50   Input ~ 0
+PB2
+Text GLabel 875  2500 0    50   Input ~ 0
+PB3
+Text GLabel 875  2600 0    50   Input ~ 0
+PB4
+Text GLabel 875  2700 0    50   Input ~ 0
+PB5
+Text GLabel 875  2800 0    50   Input ~ 0
+PB6
+Text GLabel 875  2900 0    50   Input ~ 0
+PB7
+Wire Wire Line
+	5875 5500 5875 5700
+Connection ~ 5875 5500
+Connection ~ 5875 5700
+Wire Wire Line
+	925  4150 925  4300
+Wire Wire Line
+	1075 4150 1075 4400
+Wire Wire Line
+	1275 4300 925  4300
+Connection ~ 925  4300
+Wire Wire Line
+	925  4300 925  4850
+Wire Wire Line
+	1275 4400 1075 4400
+Connection ~ 1075 4400
+Wire Wire Line
+	1075 4400 1075 4750
+$Comp
+L 74xx:74LS04 U13
+U 1 1 6037E9C1
+P 10650 5850
+F 0 "U13" V 10696 5670 50  0000 R CNN
+F 1 "74LS04" V 10605 5670 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10650 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10650 5850 50  0001 C CNN
+	1    10650 5850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS04 U13
+U 2 1 60380CDF
+P 10650 5175
+F 0 "U13" V 10696 4995 50  0000 R CNN
+F 1 "74LS04" V 10605 4995 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10650 5175 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10650 5175 50  0001 C CNN
+	2    10650 5175
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS04 U13
+U 3 1 60386244
+P 10650 4475
+F 0 "U13" V 10696 4295 50  0000 R CNN
+F 1 "74LS04" V 10605 4295 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10650 4475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10650 4475 50  0001 C CNN
+	3    10650 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS04 U13
+U 4 1 60387330
+P 10650 2375
+F 0 "U13" V 10696 2195 50  0000 R CNN
+F 1 "74LS04" V 10605 2195 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10650 2375 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10650 2375 50  0001 C CNN
+	4    10650 2375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS04 U13
+U 5 1 6038D79D
+P 10650 3075
+F 0 "U13" V 10696 2895 50  0000 R CNN
+F 1 "74LS04" V 10605 2895 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10650 3075 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10650 3075 50  0001 C CNN
+	5    10650 3075
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS04 U13
+U 6 1 6038E872
+P 10650 3775
+F 0 "U13" V 10696 3595 50  0000 R CNN
+F 1 "74LS04" V 10605 3595 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10650 3775 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10650 3775 50  0001 C CNN
+	6    10650 3775
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10650 2675 10650 2750
+Wire Wire Line
+	10650 4075 10650 4175
+Wire Wire Line
+	10650 4775 10650 4875
+Wire Wire Line
+	10650 3375 10650 3475
+Wire Wire Line
+	10650 5475 10650 5550
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J11
+U 1 1 603A9004
+P 9850 4325
+F 0 "J11" H 9900 4642 50  0000 C CNN
+F 1 "RAS_sel" H 9900 4551 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_2x04_P2.00mm_Vertical" H 9850 4325 50  0001 C CNN
+F 3 "~" H 9850 4325 50  0001 C CNN
+	1    9850 4325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 4775 10150 4775
+Wire Wire Line
+	10150 4775 10150 4525
+Connection ~ 10650 4775
+Wire Wire Line
+	10650 3475 10425 3475
+Wire Wire Line
+	10425 3475 10425 4425
+Wire Wire Line
+	10425 4425 10150 4425
+Connection ~ 10650 3475
+Wire Wire Line
+	10650 2750 10325 2750
+Wire Wire Line
+	10325 2750 10325 4325
+Wire Wire Line
+	10325 4325 10150 4325
+Connection ~ 10650 2750
+Wire Wire Line
+	10650 2750 10650 2775
 $EndSCHEMATC
