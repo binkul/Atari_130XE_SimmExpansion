@@ -1,12 +1,12 @@
 G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,(5.1.0)-1*
-G04 #@! TF.CreationDate,2021-02-28T16:26:20+01:00*
+G04 #@! TF.CreationDate,2021-03-01T10:42:37+01:00*
 G04 #@! TF.ProjectId,Atari simm expansion,41746172-6920-4736-996d-6d2065787061,rev?*
 G04 #@! TF.SameCoordinates,Original*
 G04 #@! TF.FileFunction,Soldermask,Top*
 G04 #@! TF.FilePolarity,Negative*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW (5.1.0)-1) date 2021-02-28 16:26:20*
+G04 Created by KiCad (PCBNEW (5.1.0)-1) date 2021-03-01 10:42:37*
 %MOMM*%
 %LPD*%
 G04 APERTURE LIST*

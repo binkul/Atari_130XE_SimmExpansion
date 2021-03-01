@@ -105,10 +105,10 @@ A3
 Text GLabel 8675 1650 0    50   Input ~ 0
 A7
 $Comp
-L Atari:DRAM_1MB_4bit U11
+L Atari:DRAM_1MB_4bit U10
 U 1 1 603575E0
 P 8950 3275
-F 0 "U11" H 8950 4240 50  0000 C CNN
+F 0 "U10" H 8950 4240 50  0000 C CNN
 F 1 "DRAM_1MB_4bit" H 8950 4149 50  0000 C CNN
 F 2 "Atari:SOJ-26" H 8950 3675 50  0001 C CNN
 F 3 "" H 8950 3275 50  0001 C CNN
@@ -148,10 +148,10 @@ DQ2
 Text GLabel 9400 3275 2    50   Input ~ 0
 DQ3
 $Comp
-L Atari:DRAM_1MB_4bit U12
+L Atari:DRAM_1MB_4bit U9
 U 1 1 60359515
 P 8950 5450
-F 0 "U12" H 8950 6415 50  0000 C CNN
+F 0 "U9" H 8950 6415 50  0000 C CNN
 F 1 "DRAM_1MB_4bit" H 8950 6324 50  0000 C CNN
 F 2 "Atari:SOJ-26" H 8950 5850 50  0001 C CNN
 F 3 "" H 8950 5450 50  0001 C CNN
@@ -1028,47 +1028,6 @@ Text GLabel 10650 6150 3    50   Input ~ 0
 RAS
 Text GLabel 2475 3400 0    50   Input ~ 0
 RAS_OUT
-$Comp
-L Atari:GAL16V8_PLCC U100
-U 1 1 603F3AED
-P -925 3600
-F 0 "U100" H -925 4631 50  0000 C CNN
-F 1 "GAL16V8_PLCC" H -925 4540 50  0000 C CNN
-F 2 "Package_LCC:PLCC-28" H -925 3600 50  0001 C CNN
-F 3 "" H -925 3600 50  0001 C CNN
-	1    -925 3600
-	1    0    0    -1  
-$EndComp
-Text GLabel -1425 2950 0    50   Input ~ 0
-RAS_OUT
-Text GLabel -1425 3050 0    50   Input ~ 0
-REF
-Text GLabel -1425 3150 0    50   Input ~ 0
-A14
-Text GLabel -1425 3250 0    50   Input ~ 0
-A15
-Text GLabel -1425 3350 0    50   Input ~ 0
-PB2
-Text GLabel -1425 3450 0    50   Input ~ 0
-PB3
-Text GLabel -1425 3550 0    50   Input ~ 0
-PB4
-Text GLabel -1425 3650 0    50   Input ~ 0
-CAS
-Text GLabel -1425 4150 0    50   Input ~ 0
-HALT
-Text GLabel -1425 4250 0    50   Input ~ 0
-PB5
-Text GLabel -925 4450 3    50   Input ~ 0
-GND
-Wire Wire Line
-	-1425 4050 -1775 4050
-Wire Wire Line
-	-1775 4050 -1775 4400
-Wire Wire Line
-	-1775 4400 -925 4400
-Wire Wire Line
-	-925 4400 -925 4450
 Wire Wire Line
 	2475 2200 5050 2200
 Wire Wire Line
